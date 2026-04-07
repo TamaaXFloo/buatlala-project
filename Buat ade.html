@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 💙</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+}
+
+/* LOGIN */
+#login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pin-input {
+  font-size: 30px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #00c6ff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0072ff;
+}
+
+/* CONTENT */
+#content {
+  display: none;
+  padding: 20px;
+}
+
+.title {
+  font-size: 30px;
+  margin-top: 20px;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00c6ff; }
+  to { text-shadow: 0 0 20px #00c6ff, 0 0 30px #0072ff; }
+}
+
+/* FOTO */
+.gallery img {
+  width: 90%;
+  max-width: 300px;
+  margin: 15px 0;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,198,255,0.7);
+}
+
+/* PESAN */
+#messageBox {
+  display: none;
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+  <h2>Masukkan PIN 💙</h2>
+  <input type="password" id="pin" class="pin-input" maxlength="4" placeholder="****">
+  <button onclick="checkPin()">Masuk</button>
+</div>
+
+<!-- CONTENT -->
+<div id="content">
+  <div class="title">🎉 Happy Birthday Ade 🎉</div>
+
+  <!-- FOTO -->
+  <div class="gallery">
+    <img src="Ade.jpg.jpeg">
+    <img src="ade2.jpg.jpeg">
+    <img src="ade3.jpg.jpeg">
+  </div>
+
+  <!-- TOMBOL PESAN -->
+  <button onclick="showMessage()">Klik Pesan 💌</button>
+
+  <!-- PESAN -->
+  <div id="messageBox">
+    <p>
+    Selamat hari jadi ya ade mass Syahla Adriani, yang paling cantik, lucu, imut dan menggemaskan ini, semoga kedepannya makin banyak rezeki dan selalu bisa jadi kebanggaan ortu ade, pesan mas, ade jaga diri ade yang lebih naik lagi, jangan suka males'an dan selalu menghargai waktu, dan mas mau lebih banyak waktu lagi sama ade, mas mau selalu jadi tempat cerita ade, lebih banyak canda tawa dan masih banyak lagi yang mas mau lakuin bareng sama ade, intinya mas doain ade makin sukses yahhh, yang yang paling penting jadiin mas rumah ternyamannya ade dan jadi tempat cerita ade juga okey, intinya mas sayang sama ade dan mau apa' ade selalu ke mas ngadu semuanya lah pokoknya, dan mas bakal selalu disini sama ade apapun yang terjadi, I LOVE YOU ADE MAS YANG LUCU INI 💙
+    </p>
+  </div>
+
+</div>
+
+<script>
+function checkPin() {
+  let pin = document.getElementById("pin").value;
+  if (pin === "0804") {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  } else {
+    alert("PIN salah 😢");
+  }
+}
+
+function showMessage() {
+  document.getElementById("messageBox").style.display = "block";
+}
+</script>
+
+</body>
+</html>
